@@ -17,7 +17,15 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ng-webcamera": [
+        "dist/ng-webcamera"
+      ],
+      "ng-webcamera/*": [
+        "dist/ng-webcamera/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
