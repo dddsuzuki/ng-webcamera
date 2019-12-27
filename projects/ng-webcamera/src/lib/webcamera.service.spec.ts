@@ -1,12 +1,12 @@
 import { TestBed } from '@angular/core/testing';
 
-import { NgWebcameraService } from './ng-webcamera.service';
+import { WebcameraService } from './webcamera.service';
 
 describe('NgWebcameraService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
 
   it('should be created', () => {
-    const service: NgWebcameraService = TestBed.get(NgWebcameraService);
+    const service: WebcameraService = TestBed.get(WebcameraService);
     expect(service).toBeTruthy();
   });
 });

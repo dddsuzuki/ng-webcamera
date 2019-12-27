@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NgWebcameraComponent } from './ng-webcamera.component';
+import { CameraIconComponent } from './camera-icon.component';
 
-describe('NgWebcameraComponent', () => {
-  let component: NgWebcameraComponent;
-  let fixture: ComponentFixture<NgWebcameraComponent>;
+describe('CameraIconComponent', () => {
+  let component: CameraIconComponent;
+  let fixture: ComponentFixture<CameraIconComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NgWebcameraComponent ]
+      declarations: [ CameraIconComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(NgWebcameraComponent);
+    fixture = TestBed.createComponent(CameraIconComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
