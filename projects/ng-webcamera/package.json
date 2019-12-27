@@ -1,6 +1,18 @@
 {
   "name": "ng-webcamera",
-  "version": "0.0.1",
+  "description": "Camera library for Angular",
+  "version": "1.0.1",
+  "author": "Daisuke Suzuki",
+  "license": "MIT",
+  "bugs": "https://github.com/dddsuzuki/ng-webcamera/issues",
+  "keywords": [
+    "angular",
+    "camera"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/dddsuzuki/ng-webcamera.git"
+  },
   "peerDependencies": {
     "@angular/common": "^8.2.14",
     "@angular/core": "^8.2.14"
