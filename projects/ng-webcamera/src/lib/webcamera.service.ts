@@ -44,9 +44,21 @@ export class WebcameraService {
     });
   }
 
-  cast(video: HTMLVideoElement) {
-    this.video = video;
-    this.video.srcObject = this.stream;
+  async cast(video: HTMLVideoElement) {
+    await new Promise((resolve, reject) => {
+      this.video = video;
+
+      this.video.onloadeddata = () => {
+        resolve();
+      };
+
+      this.video.onerror = () => {
+        reject();
+      };
+
+      this.video.srcObject = this.stream;
+    });
+
     this.canvas = document.createElement('canvas');
   }
 

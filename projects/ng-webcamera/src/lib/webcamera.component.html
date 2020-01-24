@@ -5,7 +5,7 @@
     </div>
   </div>
   <div class="Webcamera_controller">
-    <div class="Controller">
+    <div *ngIf="isActive" class="Controller">
       <div *ngIf="count === 0" class="Controller_captureButton" (click)="click()">
         <div class="Controller_captureButton_image">
           <webcamera-camera-icon></webcamera-camera-icon>

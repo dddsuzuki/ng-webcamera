@@ -18,6 +18,7 @@ export class WebcameraComponent implements OnInit, AfterContentInit {
   @Output() initialize: EventEmitter<boolean> = new EventEmitter();
 
   count = 0;
+  isActive = false;
 
   constructor(private webcamera: WebcameraService) { }
 
@@ -48,8 +49,10 @@ export class WebcameraComponent implements OnInit, AfterContentInit {
     this.webcamera.open(this.cameraType).catch(error => {
       this.initialize.emit(false);
     }).then(() => {
-      this.webcamera.cast(this.video.nativeElement);
       this.initialize.emit(true);
+      this.webcamera.cast(this.video.nativeElement).then(() => {
+        this.isActive = true;
+      });
     });
   }
 
