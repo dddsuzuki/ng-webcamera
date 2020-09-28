@@ -1,7 +1,7 @@
 {
   "name": "ng-webcamera",
   "description": "Camera library for Angular",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": "Daisuke Suzuki",
   "license": "MIT",
   "bugs": "https://github.com/dddsuzuki/ng-webcamera/issues",
