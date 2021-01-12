@@ -22,14 +22,14 @@ export class WebcameraComponent implements OnInit, AfterContentInit {
 
   constructor(private webcamera: WebcameraService) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
   }
 
-  ngAfterContentInit() {
+  ngAfterContentInit(): void {
     this.init();
   }
 
-  click() {
+  click(): void {
     if (this.useTimer) {
       this.count = this.timerCount;
       const timer = setInterval(() => {
@@ -45,7 +45,7 @@ export class WebcameraComponent implements OnInit, AfterContentInit {
     }
   }
 
-  private init() {
+  private init(): void {
     this.webcamera.open(this.cameraType).catch(error => {
       this.initialize.emit(false);
     }).then(() => {
@@ -56,7 +56,7 @@ export class WebcameraComponent implements OnInit, AfterContentInit {
     });
   }
 
-  private run() {
+  private run(): void {
     const image = this.webcamera.captureImage();
     this.capture.emit(image);
   }

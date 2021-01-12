@@ -9,7 +9,7 @@ export class WebcameraService {
 
   constructor() { }
 
-  async open(cameraType: string) {
+  async open(cameraType: string): Promise<void> {
     this.close();
 
     const options: any = {
@@ -30,7 +30,7 @@ export class WebcameraService {
     });
   }
 
-  close() {
+  close(): void {
     if (!this.stream) {
       return;
     }
@@ -44,8 +44,8 @@ export class WebcameraService {
     });
   }
 
-  async cast(video: HTMLVideoElement) {
-    await new Promise((resolve, reject) => {
+  async cast(video: HTMLVideoElement): Promise<void> {
+    await new Promise<void>((resolve, reject) => {
       this.video = video;
 
       this.video.onloadeddata = () => {
@@ -62,7 +62,7 @@ export class WebcameraService {
     this.canvas = document.createElement('canvas');
   }
 
-  captureImage() {
+  captureImage(): string {
     this.canvas.width = this.video.videoWidth;
     this.canvas.height = this.video.videoHeight;
     this.canvas.getContext('2d').drawImage(this.video, 0, 0, this.canvas.width, this.canvas.height);

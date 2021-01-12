@@ -9,7 +9,7 @@ export class CameraIconComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit(): void {
   }
 
 }
